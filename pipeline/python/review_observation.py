@@ -19,10 +19,13 @@ def now() -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("record", type=Path, help="Scene record beneath data/processed/imja-tsho/scenes")
-    parser.add_argument("--to", choices=["reviewed", "published"], required=True)
+    parser.add_argument("record", type=Path, help="Processed scene record beneath this repository")
+    parser.add_argument("--to", choices=["rejected", "reviewed", "published"], required=True)
+    parser.add_argument("--reason", choices=["BOUNDARY_MISMATCH", "CLOUD_OR_SNOW_CONTAMINATION", "SHADOW_CONTAMINATION", "NON_WATER_CLASSIFICATION", "TEMPORAL_INCONSISTENCY", "INSUFFICIENT_EVIDENCE", "OTHER_REVIEW_REASON"])
     parser.add_argument("--note", required=True, help="Human review rationale, retained in state history")
     args = parser.parse_args()
+    if args.to == "rejected" and not args.reason:
+        parser.error("--reason is required when rejecting a processed candidate")
     path = args.record.resolve()
     if ROOT not in path.parents:
         parser.error("record must be inside this repository")
@@ -31,6 +34,17 @@ def main() -> None:
     if not can_transition(current, args.to, record["rejection_reasons"]):
         parser.error(f"invalid transition {current} -> {args.to}")
     record["observation_state"] = args.to
+    flags = record.setdefault("quality_flags", [])
+    if args.to == "rejected":
+        record["rejection_reasons"] = list(dict.fromkeys(record.get("rejection_reasons", []) + [f"HUMAN_REJECTED_{args.reason}"]))
+        record["quality_flags"] = [flag for flag in flags if flag != "QA_PASSED_PENDING_REVIEW"]
+        record["quality_flags"].append("HUMAN_REJECTED")
+    if args.to == "reviewed":
+        record["quality_flags"] = [flag for flag in flags if flag != "QA_PASSED_PENDING_REVIEW"]
+        if "HUMAN_REVIEWED" not in record["quality_flags"]:
+            record["quality_flags"].append("HUMAN_REVIEWED")
+    if args.to == "published" and "PUBLISHED_AFTER_REVIEW" not in flags:
+        flags.append("PUBLISHED_AFTER_REVIEW")
     record.setdefault("state_history", []).append({"state": args.to, "at": now(), "note": args.note})
     path.write_text(json.dumps(record, indent=2) + "\n")
     if args.to == "published":

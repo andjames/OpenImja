@@ -1,0 +1,8 @@
+{
+  "sensor_family": "Landsat",
+  "start": "2018-10-01",
+  "end": "2018-12-15",
+  "available_scenes": 9,
+  "usable": 0,
+  "generated_at": "2026-08-28T17:30:36.580699Z"
+}

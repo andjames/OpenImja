@@ -1,30 +1,14 @@
 {
-  "pair_count": 1,
-  "quantified_pair_count": 1,
+  "pair_count": 0,
+  "quantified_pair_count": 0,
   "overall": {
-    "count": 1,
-    "median_absolute_difference_km2": 0.6145400000000001,
-    "median_absolute_percentage_difference": 45.85298155554229,
-    "mean_signed_difference_km2": -0.6145400000000001,
-    "maximum_absolute_difference_km2": 0.6145400000000001
+    "count": 0,
+    "median_absolute_difference_km2": null,
+    "median_absolute_percentage_difference": null,
+    "mean_signed_difference_km2": null,
+    "maximum_absolute_difference_km2": null
   },
-  "by_orbit_pass": {
-    "DESCENDING": {
-      "count": 1,
-      "median_absolute_difference_km2": 0.6145400000000001,
-      "median_absolute_percentage_difference": 45.85298155554229,
-      "mean_signed_difference_km2": -0.6145400000000001,
-      "maximum_absolute_difference_km2": 0.6145400000000001
-    }
-  },
-  "by_season": {
-    "post_monsoon": {
-      "count": 1,
-      "median_absolute_difference_km2": 0.6145400000000001,
-      "median_absolute_percentage_difference": 45.85298155554229,
-      "mean_signed_difference_km2": -0.6145400000000001,
-      "maximum_absolute_difference_km2": 0.6145400000000001
-    }
-  },
+  "by_orbit_pass": {},
+  "by_season": {},
   "interpretation": "Insufficient evidence for validation success"
 }

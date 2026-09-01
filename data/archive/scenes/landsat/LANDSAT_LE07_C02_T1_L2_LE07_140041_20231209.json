@@ -1,0 +1,68 @@
+{
+  "lake_id": "imja-tsho",
+  "variable": "lake_area",
+  "measurement_family": "optical",
+  "value": 1.835801,
+  "unit": "km2",
+  "observed_at": "2023-12-09T02:17:19.365000Z",
+  "processed_at": "2026-08-28T17:32:03.013680Z",
+  "source": "Landsat",
+  "source_product": "LANDSAT/LE07/C02/T1_L2/LE07_140041_20231209",
+  "source_url": "https://developers.google.com/earth-engine/datasets/catalog/landsat",
+  "method": "landsat_c2_l2_ndwi_connected_component",
+  "method_version": "0.2.0-archive",
+  "parameters": {
+    "index": "NDWI=(green-NIR)/(green+NIR)",
+    "ndwi_threshold": 0.1,
+    "cloud_mask": "QA_PIXEL fill/dilated-cloud/cirrus/cloud/shadow/snow bits; Landsat 7 post-2003 SLC-off scenes rejected by archive policy",
+    "historical_outlier_policy": "record_only"
+  },
+  "confidence": null,
+  "quality_flags": [
+    "LANDSAT_7_SLC_OFF",
+    "LOW_LAKE_ENVELOPE_OBSERVABILITY"
+  ],
+  "observation_state": "rejected",
+  "rejection_reasons": [
+    "LANDSAT_7_SLC_OFF",
+    "LOW_LAKE_ENVELOPE_OBSERVABILITY"
+  ],
+  "state_history": [
+    {
+      "state": "discovered",
+      "at": "2026-08-28T17:32:03.013680Z"
+    },
+    {
+      "state": "rejected",
+      "at": "2026-08-28T17:32:03.013680Z"
+    }
+  ],
+  "freshness": {
+    "status": "HISTORICAL",
+    "age_days": 993,
+    "evaluated_at": "2026-08-28T17:32:03.013680Z"
+  },
+  "boundary_geojson_url": "data/archive/scenes/landsat/LANDSAT_LE07_C02_T1_L2_LE07_140041_20231209.geojson",
+  "qa": {
+    "aoi_valid_fraction": 0.4380951667178796,
+    "lake_envelope_valid_fraction": 0.552358592714269,
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+    "outlier_reference_observation": null,
+    "relative_area_change": null
+  },
+  "provenance": {
+    "code_version": "scan_landsat_v0_2",
+    "config_path": "config/lakes/imja-tsho.json",
+    "image_id": "LANDSAT/LE07/C02/T1_L2/LE07_140041_20231209",
+    "earth_engine_collection": "LANDSAT/LE07/C02/T1_L2",
+    "scene_cloud_cover_percent": 19,
+    "sensor_family": "Landsat",
+    "sensor": "ETM+",
+    "platform": "Landsat 7",
+    "collection": "LANDSAT/LE07/C02/T1_L2",
+    "spatial_resolution_m": 30,
+    "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+    "geometry_config_path": "config/lakes/imja-tsho.json",
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
+  }
+}

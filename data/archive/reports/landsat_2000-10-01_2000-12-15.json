@@ -1,0 +1,8 @@
+{
+  "sensor_family": "Landsat",
+  "start": "2000-10-01",
+  "end": "2000-12-15",
+  "available_scenes": 5,
+  "usable": 0,
+  "generated_at": "2026-08-28T17:26:41.790952Z"
+}

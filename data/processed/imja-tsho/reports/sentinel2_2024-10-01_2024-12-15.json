@@ -1,0 +1,137 @@
+{
+  "lake_id": "imja-tsho",
+  "start": "2024-10-01",
+  "end": "2024-12-15",
+  "generated_at": "2026-08-31T18:22:28.460053Z",
+  "scene_count": 15,
+  "states": {
+    "processed": 14,
+    "rejected": 1
+  },
+  "scenes": [
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241003T044659_20241003T045455_T45RVL",
+      "observed_at": "2024-10-03T05:01:05.716000Z",
+      "state": "rejected",
+      "rejection_reasons": [
+        "LOW_AOI_OBSERVABILITY",
+        "LOW_LAKE_ENVELOPE_OBSERVABILITY",
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "lake_envelope_valid_fraction": 0.023336853220696955,
+      "value": null
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241008T044701_20241008T045601_T45RVL",
+      "observed_at": "2024-10-08T05:01:02.832000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9591786929484929,
+      "value": 1.725943
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241013T044659_20241013T045225_T45RVL",
+      "observed_at": "2024-10-13T05:01:00.143000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9588806758183747,
+      "value": 1.752907
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241018T044811_20241018T045820_T45RVL",
+      "observed_at": "2024-10-18T05:01:04.448000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.8928182564824597,
+      "value": 1.636133
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241023T044749_20241023T045343_T45RVL",
+      "observed_at": "2024-10-23T05:01:05.452000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9522609409832224,
+      "value": 1.801921
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241028T044911_20241028T045458_T45RVL",
+      "observed_at": "2024-10-28T05:01:05.277000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9837369470843604,
+      "value": 1.807635
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241102T044849_20241102T045605_T45RVL",
+      "observed_at": "2024-11-02T05:01:03.152000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9539563533966913,
+      "value": 1.766438
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241107T045011_20241107T045627_T45RVL",
+      "observed_at": "2024-11-07T05:01:00.558000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9384547694473779,
+      "value": 1.732358
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241112T044929_20241112T045529_T45RVL",
+      "observed_at": "2024-11-12T05:00:59.783000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.948799718409011,
+      "value": 1.689859
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241117T045101_20241117T045056_T45RVL",
+      "observed_at": "2024-11-17T05:01:04.210000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9755508623724041,
+      "value": 1.806833
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241122T045029_20241122T045607_T45RVL",
+      "observed_at": "2024-11-22T05:01:04.916000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9985803120966795,
+      "value": 1.854444
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241127T045131_20241127T045131_T45RVL",
+      "observed_at": "2024-11-27T05:01:02.466000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9766748797371816,
+      "value": 1.831391
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241202T045139_20241202T045922_T45RVL",
+      "observed_at": "2024-12-02T05:01:05.724000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 1.0,
+      "value": 1.882911
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241207T045201_20241207T045203_T45RVL",
+      "observed_at": "2024-12-07T05:01:05.721000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.9985040478704681,
+      "value": 1.789492
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20241212T045119_20241212T045116_T45RVL",
+      "observed_at": "2024-12-12T05:01:05.807000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 1.0,
+      "value": 1.812446
+    }
+  ]
+}

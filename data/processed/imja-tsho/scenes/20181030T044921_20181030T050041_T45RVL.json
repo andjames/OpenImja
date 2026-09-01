@@ -1,0 +1,62 @@
+{
+  "lake_id": "imja-tsho",
+  "variable": "lake_area",
+  "value": 1.146686,
+  "unit": "km2",
+  "observed_at": "2018-10-30T05:01:00.932000Z",
+  "processed_at": "2026-08-31T18:14:23.568413Z",
+  "source": "Sentinel-2",
+  "source_product": "COPERNICUS/S2_SR_HARMONIZED/20181030T044921_20181030T050041_T45RVL",
+  "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+  "method": "sentinel2_s2sr_qa60_scl_ndwi_connected_component",
+  "method_version": "0.1.0",
+  "parameters": {
+    "index": "NDWI=(B3-B8)/(B3+B8)",
+    "ndwi_threshold": 0.1,
+    "cloud_mask": "QA60 cloud/cirrus bits plus SCL cloud-shadow/snow classes",
+    "aoi_status": "expanded_after_edge_clipping_review_requires_visual_validation"
+  },
+  "confidence": null,
+  "quality_flags": [
+    "LOW_LAKE_ENVELOPE_OBSERVABILITY"
+  ],
+  "observation_state": "rejected",
+  "rejection_reasons": [
+    "LOW_LAKE_ENVELOPE_OBSERVABILITY"
+  ],
+  "state_history": [
+    {
+      "state": "discovered",
+      "at": "2026-08-31T18:14:23.568413Z"
+    },
+    {
+      "state": "rejected",
+      "at": "2026-08-31T18:14:23.568413Z"
+    }
+  ],
+  "freshness": {
+    "status": "HISTORICAL",
+    "age_days": 2862,
+    "evaluated_at": "2026-08-31T18:14:23.568413Z"
+  },
+  "boundary_geojson_url": null,
+  "qa": {
+    "aoi_valid_fraction": 0.8344753106280837,
+    "lake_envelope_valid_fraction": 0.7917857561891349,
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+    "outlier_reference_observation": null,
+    "relative_area_change": null
+  },
+  "provenance": {
+    "code_version": "scan_sentinel2_v0_1",
+    "config_path": "config/lakes/imja-tsho.json",
+    "image_id": "COPERNICUS/S2_SR_HARMONIZED/20181030T044921_20181030T050041_T45RVL",
+    "earth_engine_collection": "COPERNICUS/S2_SR_HARMONIZED",
+    "scene_cloud_cover_percent": 2.445908,
+    "aoi_valid_fraction": 0.8344753106280837,
+    "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+    "geometry_config_path": "config/lakes/imja-tsho.json",
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
+  },
+  "measurement_family": "optical"
+}

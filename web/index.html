@@ -31,14 +31,22 @@
       <section class="panel" aria-labelledby="history-heading">
         <div class="section-heading"><p class="eyebrow">ARCHIVE</p><h2 id="history-heading">Historical lake area</h2></div>
         <div id="chart" class="chart" role="img" aria-label="Historical lake surface area chart"></div>
-        <p class="caption">Only reviewed, valid observations are charted. Different sensors and method versions may not be directly comparable.</p>
+        <p class="caption">Solid markers are reviewed/published measurements. Hollow markers are QA-passing candidates awaiting human review. Rejected scenes and gaps are retained in the archive but are not plotted as lake-area values. Different sensors and method versions may not be directly comparable.</p>
+      </section>
+
+      <section class="panel observability" aria-labelledby="observability-heading">
+        <div class="section-heading"><p class="eyebrow">OBSERVATION COVERAGE</p><h2 id="observability-heading">Archive status</h2></div>
+        <div id="observability-content" class="coverage-grid" aria-live="polite"><p>Loading scene-level archive status…</p></div>
+        <p class="caption">Acquired means a satellite scene was found. Usable means it passed the relevant quality checks. These are data-coverage counts only, never a hazard or safety score.</p>
+        <div id="recent-scenes" class="scene-list" aria-live="polite"></div>
       </section>
 
       <section class="two-column">
         <article class="panel" aria-labelledby="boundary-heading">
-          <div class="section-heading"><p class="eyebrow">LATEST DERIVATION</p><h2 id="boundary-heading">Lake boundary</h2></div>
+          <div class="section-heading"><p class="eyebrow">PUBLISHED DERIVATIONS</p><h2 id="boundary-heading">Lake boundary</h2></div>
           <div id="map" class="map" aria-live="polite">Loading boundary…</div>
-          <p class="caption">Derived probable-water boundary; not an authoritative shoreline.</p>
+          <div id="boundary-controls" class="boundary-controls" hidden><button type="button" id="boundary-prev">← Earlier</button><span id="boundary-label"></span><button type="button" id="boundary-next">Later →</button></div>
+          <p class="caption">Published derived probable-water boundaries share one map extent. Use controls to compare layouts; the animation is visual only, not interpolation. Not an authoritative shoreline.</p>
         </article>
         <article class="panel provenance" aria-labelledby="provenance-heading">
           <div class="section-heading"><p class="eyebrow">REPRODUCIBILITY</p><h2 id="provenance-heading">Source &amp; method</h2></div>
@@ -47,7 +55,8 @@
         </article>
       </section>
     </main>
-    <footer>OpenImja v0.1 · Static, file-based public data · <a href="../README.md">Repository notes</a></footer>
+    <footer>OpenImja v0.1 · Static, file-based public data · <a href="review.html">Review queue</a> · <a href="../README.md">Repository notes</a> · <a href="../docs/archive-methodology.md">Archive methodology</a></footer>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

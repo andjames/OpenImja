@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenImja planned source registry",
+  "type": "object",
+  "required": ["registry_version", "lake_id", "sources"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "registry_version": {"type": "string"},
+    "lake_id": {"type": "string"},
+    "sources": {"type": "array", "items": {"type": "object", "required": ["id", "title", "ontology", "verification_status", "implementation_status", "temporal_status", "planned_roles", "notes"], "properties": {"id": {"type": "string"}, "title": {"type": "string"}, "ontology": {"enum": ["satellite_observation", "field_measurement", "terrain_model", "bathymetric_survey", "derived_measurement", "model_output", "infrastructure_record", "contextual_dataset"]}, "verification_status": {"enum": ["verified_catalogue", "requires_verification"]}, "implementation_status": {"enum": ["implemented", "planned", "research_only"]}, "temporal_status": {"enum": ["historical", "latest_authoritative", "near_real_time", "satellite_derived", "modelled", "stale", "unknown"]}, "source_url": {"type": "string", "format": "uri"}, "doi": {"type": "string"}, "reported_observation_date": {"type": "string"}, "planned_roles": {"type": "array", "items": {"type": "string"}}, "common_provenance_expected": {"type": "array", "items": {"type": "string"}}, "notes": {"type": "string"}}, "additionalProperties": false}}
+  },
+  "additionalProperties": false
+}

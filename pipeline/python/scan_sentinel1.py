@@ -12,6 +12,7 @@ import ee
 import google.auth
 
 from freshness import classify
+from geometry import geometry_provenance
 from sar_qa import assess_sar_scene
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -61,6 +62,7 @@ def process_scene(image: ee.Image, config: dict, envelope: ee.Geometry) -> dict:
     decision = assess_sar_scene(lake_envelope_valid_fraction=envelope_fraction, lake_area_km2=area, policy=sar)
     processed = datetime.now(timezone.utc)
     record = {"lake_id": config["id"], "variable": "lake_area", "measurement_family": "sar", "value": area, "unit": "km2", "observed_at": z(observed), "processed_at": z(processed), "source": "Sentinel-1", "source_product": image_id, "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD", "method": METHOD, "method_version": METHOD_VERSION, "parameters": {"instrument_mode": sar["instrument_mode"], "polarization": pol, "edge_mask_threshold_db": sar["edge_mask_threshold_db"], "water_backscatter_threshold_db": sar["water_backscatter_threshold_db"], "classifier": f"{pol} <= threshold", "earth_engine_preprocessing": "GRD calibrated, ortho-corrected dB; orbit/noise/radiometric/terrain steps provided by Earth Engine"}, "confidence": None, "quality_flags": decision.rejection_reasons or ["EXPERIMENTAL_SAR_PENDING_REVIEW"], "observation_state": decision.state, "rejection_reasons": decision.rejection_reasons, "state_history": [{"state": "discovered", "at": z(processed)}, {"state": decision.state, "at": z(processed)}], "freshness": classify(observed, processed), "boundary_geojson_url": None, "qa": {"aoi_valid_fraction": valid_fraction(masked, aoi, pol), "lake_envelope_valid_fraction": envelope_fraction, "reference_lake_envelope_path": config["reviewed_reference_lake_envelope"]["path"], "outlier_reference_observation": None, "relative_area_change": None}, "provenance": {"code_version": "scan_sentinel1_v0_1", "config_path": "config/lakes/imja-tsho.json", "image_id": image_id, "earth_engine_collection": "COPERNICUS/S1_GRD", "orbit_pass": properties.get("orbitProperties_pass"), "relative_orbit": properties.get("relativeOrbitNumber_start"), "platform_number": properties.get("platform_number"), "instrument_mode": properties.get("instrumentMode"), "polarizations": properties.get("transmitterReceiverPolarisation"), "resolution_meters": properties.get("resolution_meters")}}
+    record["provenance"].update(geometry_provenance(config))
     if boundary:
         path = SCENE_DIR / f"{safe_id(properties['system:index'])}.geojson"
         path.write_text(json.dumps({"type": "FeatureCollection", "features": [boundary]}, indent=2) + "\n")

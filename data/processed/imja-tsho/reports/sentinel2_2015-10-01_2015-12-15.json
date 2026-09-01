@@ -1,0 +1,12 @@
+{
+  "lake_id": "imja-tsho",
+  "start": "2015-10-01",
+  "end": "2015-12-15",
+  "generated_at": "2026-08-31T18:13:51.304720Z",
+  "scene_count": 0,
+  "states": {
+    "processed": 0,
+    "rejected": 0
+  },
+  "scenes": []
+}

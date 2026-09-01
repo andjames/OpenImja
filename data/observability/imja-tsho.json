@@ -1,0 +1,254 @@
+{
+  "lake_id": "imja-tsho",
+  "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+  "as_of": "2026-08-31T21:13:54.214768Z",
+  "definitions": "Acquisition counts are canonical-geometry archived scene records; usable means processed/reviewed/published, not a hazard signal.",
+  "periods": [
+    {
+      "period_days": 30,
+      "total_acquisitions": 0,
+      "optical_acquisitions": 0,
+      "usable_optical": 0,
+      "rejected_optical": 0,
+      "sar_acquisitions": 0,
+      "usable_sar": 0,
+      "rejected_sar": 0,
+      "latest_published_observation": {
+        "lake_id": "imja-tsho",
+        "variable": "lake_area",
+        "value": 1.34024,
+        "unit": "km2",
+        "observed_at": "2025-11-17T05:01:00.426000Z",
+        "processed_at": "2026-08-28T16:50:14.202982Z",
+        "source": "Sentinel-2",
+        "source_product": "COPERNICUS/S2_SR_HARMONIZED/20251117T044959_20251117T045240_T45RVL",
+        "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+        "method": "sentinel2_s2sr_qa60_scl_ndwi_connected_component",
+        "method_version": "0.1.0",
+        "parameters": {
+          "index": "NDWI=(B3-B8)/(B3+B8)",
+          "ndwi_threshold": 0.1,
+          "cloud_mask": "QA60 cloud/cirrus bits plus SCL cloud-shadow/snow classes",
+          "aoi_status": "expanded_after_edge_clipping_review_requires_visual_validation"
+        },
+        "confidence": null,
+        "quality_flags": [
+          "HUMAN_REVIEWED",
+          "PUBLISHED_AFTER_REVIEW"
+        ],
+        "observation_state": "published",
+        "rejection_reasons": [],
+        "state_history": [
+          {
+            "state": "discovered",
+            "at": "2026-08-28T16:50:14.202982Z"
+          },
+          {
+            "state": "processed",
+            "at": "2026-08-28T16:50:14.202982Z"
+          },
+          {
+            "state": "reviewed",
+            "at": "2026-08-28T17:54:13.552774Z",
+            "note": "Boundary follows the visible Imja Tsho shoreline; reference-envelope coverage is complete."
+          },
+          {
+            "state": "published",
+            "at": "2026-08-28T17:54:25.896578Z",
+            "note": "Reviewed boundary and provenance accepted for publication."
+          }
+        ],
+        "freshness": {
+          "status": "HISTORICAL",
+          "age_days": 284,
+          "evaluated_at": "2026-08-28T16:50:14.202982Z"
+        },
+        "boundary_geojson_url": "data/processed/imja-tsho/scenes/20251117T044959_20251117T045240_T45RVL.geojson",
+        "qa": {
+          "aoi_valid_fraction": 0.36351276292689977,
+          "lake_envelope_valid_fraction": 1.0,
+          "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+          "outlier_reference_observation": null,
+          "relative_area_change": null
+        },
+        "provenance": {
+          "code_version": "scan_sentinel2_v0_1",
+          "config_path": "config/lakes/imja-tsho.json",
+          "image_id": "COPERNICUS/S2_SR_HARMONIZED/20251117T044959_20251117T045240_T45RVL",
+          "earth_engine_collection": "COPERNICUS/S2_SR_HARMONIZED",
+          "scene_cloud_cover_percent": 0.376329,
+          "aoi_valid_fraction": 0.36351276292689977,
+          "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+          "geometry_config_path": "config/lakes/imja-tsho.json",
+          "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
+        },
+        "measurement_family": "optical"
+      },
+      "days_since_defensible_observation": 287
+    },
+    {
+      "period_days": 90,
+      "total_acquisitions": 0,
+      "optical_acquisitions": 0,
+      "usable_optical": 0,
+      "rejected_optical": 0,
+      "sar_acquisitions": 0,
+      "usable_sar": 0,
+      "rejected_sar": 0,
+      "latest_published_observation": {
+        "lake_id": "imja-tsho",
+        "variable": "lake_area",
+        "value": 1.34024,
+        "unit": "km2",
+        "observed_at": "2025-11-17T05:01:00.426000Z",
+        "processed_at": "2026-08-28T16:50:14.202982Z",
+        "source": "Sentinel-2",
+        "source_product": "COPERNICUS/S2_SR_HARMONIZED/20251117T044959_20251117T045240_T45RVL",
+        "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+        "method": "sentinel2_s2sr_qa60_scl_ndwi_connected_component",
+        "method_version": "0.1.0",
+        "parameters": {
+          "index": "NDWI=(B3-B8)/(B3+B8)",
+          "ndwi_threshold": 0.1,
+          "cloud_mask": "QA60 cloud/cirrus bits plus SCL cloud-shadow/snow classes",
+          "aoi_status": "expanded_after_edge_clipping_review_requires_visual_validation"
+        },
+        "confidence": null,
+        "quality_flags": [
+          "HUMAN_REVIEWED",
+          "PUBLISHED_AFTER_REVIEW"
+        ],
+        "observation_state": "published",
+        "rejection_reasons": [],
+        "state_history": [
+          {
+            "state": "discovered",
+            "at": "2026-08-28T16:50:14.202982Z"
+          },
+          {
+            "state": "processed",
+            "at": "2026-08-28T16:50:14.202982Z"
+          },
+          {
+            "state": "reviewed",
+            "at": "2026-08-28T17:54:13.552774Z",
+            "note": "Boundary follows the visible Imja Tsho shoreline; reference-envelope coverage is complete."
+          },
+          {
+            "state": "published",
+            "at": "2026-08-28T17:54:25.896578Z",
+            "note": "Reviewed boundary and provenance accepted for publication."
+          }
+        ],
+        "freshness": {
+          "status": "HISTORICAL",
+          "age_days": 284,
+          "evaluated_at": "2026-08-28T16:50:14.202982Z"
+        },
+        "boundary_geojson_url": "data/processed/imja-tsho/scenes/20251117T044959_20251117T045240_T45RVL.geojson",
+        "qa": {
+          "aoi_valid_fraction": 0.36351276292689977,
+          "lake_envelope_valid_fraction": 1.0,
+          "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+          "outlier_reference_observation": null,
+          "relative_area_change": null
+        },
+        "provenance": {
+          "code_version": "scan_sentinel2_v0_1",
+          "config_path": "config/lakes/imja-tsho.json",
+          "image_id": "COPERNICUS/S2_SR_HARMONIZED/20251117T044959_20251117T045240_T45RVL",
+          "earth_engine_collection": "COPERNICUS/S2_SR_HARMONIZED",
+          "scene_cloud_cover_percent": 0.376329,
+          "aoi_valid_fraction": 0.36351276292689977,
+          "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+          "geometry_config_path": "config/lakes/imja-tsho.json",
+          "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
+        },
+        "measurement_family": "optical"
+      },
+      "days_since_defensible_observation": 287
+    },
+    {
+      "period_days": 365,
+      "total_acquisitions": 9,
+      "optical_acquisitions": 9,
+      "usable_optical": 1,
+      "rejected_optical": 8,
+      "sar_acquisitions": 0,
+      "usable_sar": 0,
+      "rejected_sar": 0,
+      "latest_published_observation": {
+        "lake_id": "imja-tsho",
+        "variable": "lake_area",
+        "value": 1.34024,
+        "unit": "km2",
+        "observed_at": "2025-11-17T05:01:00.426000Z",
+        "processed_at": "2026-08-28T16:50:14.202982Z",
+        "source": "Sentinel-2",
+        "source_product": "COPERNICUS/S2_SR_HARMONIZED/20251117T044959_20251117T045240_T45RVL",
+        "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED",
+        "method": "sentinel2_s2sr_qa60_scl_ndwi_connected_component",
+        "method_version": "0.1.0",
+        "parameters": {
+          "index": "NDWI=(B3-B8)/(B3+B8)",
+          "ndwi_threshold": 0.1,
+          "cloud_mask": "QA60 cloud/cirrus bits plus SCL cloud-shadow/snow classes",
+          "aoi_status": "expanded_after_edge_clipping_review_requires_visual_validation"
+        },
+        "confidence": null,
+        "quality_flags": [
+          "HUMAN_REVIEWED",
+          "PUBLISHED_AFTER_REVIEW"
+        ],
+        "observation_state": "published",
+        "rejection_reasons": [],
+        "state_history": [
+          {
+            "state": "discovered",
+            "at": "2026-08-28T16:50:14.202982Z"
+          },
+          {
+            "state": "processed",
+            "at": "2026-08-28T16:50:14.202982Z"
+          },
+          {
+            "state": "reviewed",
+            "at": "2026-08-28T17:54:13.552774Z",
+            "note": "Boundary follows the visible Imja Tsho shoreline; reference-envelope coverage is complete."
+          },
+          {
+            "state": "published",
+            "at": "2026-08-28T17:54:25.896578Z",
+            "note": "Reviewed boundary and provenance accepted for publication."
+          }
+        ],
+        "freshness": {
+          "status": "HISTORICAL",
+          "age_days": 284,
+          "evaluated_at": "2026-08-28T16:50:14.202982Z"
+        },
+        "boundary_geojson_url": "data/processed/imja-tsho/scenes/20251117T044959_20251117T045240_T45RVL.geojson",
+        "qa": {
+          "aoi_valid_fraction": 0.36351276292689977,
+          "lake_envelope_valid_fraction": 1.0,
+          "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+          "outlier_reference_observation": null,
+          "relative_area_change": null
+        },
+        "provenance": {
+          "code_version": "scan_sentinel2_v0_1",
+          "config_path": "config/lakes/imja-tsho.json",
+          "image_id": "COPERNICUS/S2_SR_HARMONIZED/20251117T044959_20251117T045240_T45RVL",
+          "earth_engine_collection": "COPERNICUS/S2_SR_HARMONIZED",
+          "scene_cloud_cover_percent": 0.376329,
+          "aoi_valid_fraction": 0.36351276292689977,
+          "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+          "geometry_config_path": "config/lakes/imja-tsho.json",
+          "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
+        },
+        "measurement_family": "optical"
+      },
+      "days_since_defensible_observation": 287
+    }
+  ]
+}

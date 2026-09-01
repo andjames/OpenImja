@@ -24,6 +24,11 @@ class TemporalAndLifecycleTest(unittest.TestCase):
         self.assertFalse(should_update_latest(existing, older))
         self.assertTrue(should_update_latest(existing, newer))
 
+    def test_corrected_same_source_can_replace_legacy_latest(self):
+        existing = {"latest_observation": {"observed_at": "2025-11-17T05:01:00Z", "source_product": "S2/example", "observation_state": "published"}}
+        corrected = {"observed_at": "2025-11-17T05:01:00Z", "source_product": "S2/example", "observation_state": "published"}
+        self.assertTrue(should_update_latest(existing, corrected))
+
 
 class SarAndPairingTest(unittest.TestCase):
     def test_sar_low_envelope_is_rejected(self):

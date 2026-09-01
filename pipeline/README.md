@@ -50,6 +50,16 @@ python pipeline/python/review_observation.py data/processed/imja-tsho/scenes/SCE
 
 Run regression checks with `PYTHONPATH=pipeline/python python -m unittest discover -s pipeline/python/tests`.
 
+## Static review queue
+
+Generate a local review queue after collecting candidate scenes:
+
+```sh
+python pipeline/python/build_review_queue.py
+```
+
+Open `web/review.html` through a static server. It shows retained boundaries and QA context, recommends a small representative subset per sensor/year, and copies lifecycle commands. It cannot mutate records from the browser. A human rejection uses a controlled machine-readable reason; review and publication still require a retained note.
+
 ## Experimental Sentinel-1 validation
 
 `scan_sentinel1.py` scans IW/VV GRD scenes using configurable dB thresholds and the same lifecycle, reference-envelope, and provenance architecture. It creates SAR candidates/rejections only; it never publishes or substitutes for optical observations.
@@ -62,4 +72,16 @@ python pipeline/python/summarize_s1_s2_pairs.py
 
 See [SAR methodology](../docs/sar-methodology.md). The pairing CSV retains all nearby SAR records, including rejected scenes, so a small or selective sample cannot be mistaken for validation.
 
-For a long-term candidate series (Landsat) and recent Sentinel-2 dates, first inspect the date strategy in `build_history.py`; it deliberately requires `--execute` before it runs processing. Landsat's 30 m results need separate review before comparing them with Sentinel-2.
+## Historical optical archive and observability
+
+`build_optical_archive.py` is intentionally scene-first. It writes `data/archive/optical-scenes.csv` with every discovered Landsat/Sentinel-2 record, including rejections, then writes the much smaller reviewed/published measurement series separately. It does not force annual values or interpolate gaps.
+
+```sh
+python pipeline/python/build_optical_archive.py --start-year 1985 --end-year 2026 --execute --project "$OPENIMJA_EE_PROJECT"
+python pipeline/python/build_optical_archive.py --start-year 1985 --end-year 2026
+python pipeline/python/pair_optical_sensors.py --window-days 7
+python pipeline/python/pair_s1_s2.py --window-days 3
+python pipeline/python/build_observability.py
+```
+
+Without `--execute`, an unsearched year is explicitly `not_scanned`; it is not reported as a missing acquisition. See [archive methodology](../docs/archive-methodology.md). Landsat's 30 m observations need independent review and are not merged with Sentinel-2.

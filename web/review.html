@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Human review queue for OpenImja candidate observations.">
+    <title>OpenImja — Review queue</title><link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header"><a class="wordmark" href="./">OPENIMJA <span>OBSERVATORY</span></a><p>Human review queue · no browser-side publication</p></header>
+    <main>
+      <section class="intro"><p class="eyebrow">CANDIDATE REVIEW</p><h1>REVIEW QUEUE</h1><p class="location">Inspect source imagery and the retained boundary before any lifecycle transition.</p></section>
+      <section class="notice"><strong>Review aid, not an automatic decision.</strong> Queue rank only selects representative processed candidates within a sensor/year group. It does not establish correctness, uncertainty, or publication suitability.</section>
+      <section class="panel"><div class="section-heading"><p class="eyebrow">QUEUE STATUS</p><h2>Processed candidates</h2></div><div id="queue-summary" class="coverage-grid" aria-live="polite">Loading review queue…</div><button id="show-all" class="queue-toggle" type="button">Show all processed candidates</button></section>
+      <section id="review-cards" class="review-grid compact" aria-live="polite"></section>
+    </main>
+    <footer>OpenImja v0.1 · Static review aid · <a href="../docs/archive-methodology.md">Archive methodology</a></footer>
+    <script src="review.js"></script>
+  </body>
+</html>

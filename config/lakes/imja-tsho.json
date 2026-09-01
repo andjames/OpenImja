@@ -14,6 +14,7 @@
     "coordinates": [[[86.905, 27.887], [86.950, 27.887], [86.950, 27.911], [86.905, 27.911], [86.905, 27.887]]]
   },
   "aoi_status": "expanded_after_edge_clipping_review_requires_visual_validation",
+  "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
   "reviewed_reference_lake_envelope": {
     "path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
     "source_observation": "data/processed/imja-tsho/2025-11-17.json",
@@ -26,6 +27,12 @@
     "outlier_comparison_max_age_days": 730,
     "outlier_minimum_elapsed_days": 30,
     "outlier_max_relative_area_change": 0.5
+  },
+  "optical_archive": {
+    "season_start_month_day": "10-01",
+    "season_end_month_day": "12-15",
+    "historical_outlier_policy": "record_only",
+    "notes": "Post-monsoon is an initial exploratory window, not an assertion of optimality. Scene-level QA is retained for all acquisitions; dates/windows can be changed for experiments. Historical temporal outliers are recorded but not automatically rejected because genuine early lake growth may be large."
   },
   "sentinel1_sar": {
     "instrument_mode": "IW",

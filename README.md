@@ -33,6 +33,10 @@ Review the generated GeoJSON boundary and quality flags before publishing it. Re
 
 Every published observation should make clear what was measured, when it was observed, source product, method and parameters, quality flags, freshness, and how to reproduce it. See [the methodology](docs/methodology.md) and [limitations](docs/limitations.md).
 
+The historical archive deliberately distinguishes satellite availability from a usable measurement. Its scene manifest preserves every assessed acquisition, including rejection reasons, while its measurement CSV contains only reviewed/published values. Unsearched periods are labelled `not_scanned`, not “no acquisition”; gaps are not interpolated. See [historical archive methodology](docs/archive-methodology.md).
+
+OpenImja’s planned evolution from a lake-area experiment to a glacier–lake observatory is documented in the [technical and scientific roadmap](docs/roadmap.md). The active implementation priority remains the historical optical archive, modern observability, and independent SAR validation; future sources are not automatically ingested.
+
 The Imja processing AOI and seed point are draft geometry. They were corrected after visual inspection showed the first draft point was displaced from the lake; they still require review against imagery before a value is published.
 
 ## Freshness is not risk

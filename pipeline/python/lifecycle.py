@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 
-ALLOWED_TRANSITIONS = {("processed", "reviewed"), ("reviewed", "published")}
+ALLOWED_TRANSITIONS = {("processed", "rejected"), ("processed", "reviewed"), ("reviewed", "published")}
 
 
 def can_transition(current: str, target: str, rejection_reasons: list[str]) -> bool:
@@ -20,4 +20,9 @@ def should_update_latest(existing_latest: dict | None, candidate: dict) -> bool:
         return True
     if existing.get("observation_state") != "published":
         return True
-    return candidate["observed_at"] > existing.get("observed_at", "")
+    if candidate["observed_at"] > existing.get("observed_at", ""):
+        return True
+    # A corrected-geometry or method reprocessing of the *same acquisition*
+    # may replace a legacy representation. This does not permit a different,
+    # older historical acquisition to regress the public latest record.
+    return candidate.get("observed_at") == existing.get("observed_at") and candidate.get("source_product") == existing.get("source_product")

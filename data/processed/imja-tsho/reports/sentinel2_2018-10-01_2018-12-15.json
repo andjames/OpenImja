@@ -1,0 +1,43 @@
+{
+  "lake_id": "imja-tsho",
+  "start": "2018-10-01",
+  "end": "2018-12-15",
+  "generated_at": "2026-08-31T18:14:28.591997Z",
+  "scene_count": 3,
+  "states": {
+    "processed": 1,
+    "rejected": 2
+  },
+  "scenes": [
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20181030T044921_20181030T050041_T45RVL",
+      "observed_at": "2018-10-30T05:01:00.932000Z",
+      "state": "rejected",
+      "rejection_reasons": [
+        "LOW_LAKE_ENVELOPE_OBSERVABILITY"
+      ],
+      "lake_envelope_valid_fraction": 0.7917857561891349,
+      "value": 1.146686
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20181109T045011_20181109T045010_T45RVL",
+      "observed_at": "2018-11-09T05:00:59.875000Z",
+      "state": "processed",
+      "rejection_reasons": [],
+      "lake_envelope_valid_fraction": 0.8087621729437987,
+      "value": 1.174652
+    },
+    {
+      "source_product": "COPERNICUS/S2_SR_HARMONIZED/20181214T045209_20181214T045509_T45RVL",
+      "observed_at": "2018-12-14T05:00:58.263000Z",
+      "state": "rejected",
+      "rejection_reasons": [
+        "LOW_AOI_OBSERVABILITY",
+        "LOW_LAKE_ENVELOPE_OBSERVABILITY",
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "lake_envelope_valid_fraction": 0.0020931596855567306,
+      "value": null
+    }
+  ]
+}
