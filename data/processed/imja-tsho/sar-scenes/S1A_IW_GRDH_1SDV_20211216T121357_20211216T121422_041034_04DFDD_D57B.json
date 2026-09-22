@@ -1,0 +1,71 @@
+{
+  "lake_id": "imja-tsho",
+  "variable": "lake_area",
+  "measurement_family": "sar",
+  "value": null,
+  "unit": "km2",
+  "observed_at": "2021-12-16T12:13:57Z",
+  "processed_at": "2026-09-07T03:24:42.465525Z",
+  "source": "Sentinel-1",
+  "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211216T121357_20211216T121422_041034_04DFDD_D57B",
+  "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+  "method": "sentinel1_grd_vv_threshold_connected_component",
+  "method_version": "0.1.0-experimental",
+  "parameters": {
+    "instrument_mode": "IW",
+    "polarization": "VV",
+    "edge_mask_threshold_db": -30,
+    "water_backscatter_threshold_db": -17,
+    "classifier": "VV <= threshold",
+    "earth_engine_preprocessing": "GRD calibrated, ortho-corrected dB; orbit/noise/radiometric/terrain steps provided by Earth Engine"
+  },
+  "confidence": null,
+  "quality_flags": [
+    "NO_LAKE_COMPONENT_AT_SEED"
+  ],
+  "observation_state": "rejected",
+  "rejection_reasons": [
+    "NO_LAKE_COMPONENT_AT_SEED"
+  ],
+  "state_history": [
+    {
+      "state": "discovered",
+      "at": "2026-09-07T03:24:42.465525Z"
+    },
+    {
+      "state": "rejected",
+      "at": "2026-09-07T03:24:42.465525Z"
+    }
+  ],
+  "freshness": {
+    "status": "HISTORICAL",
+    "age_days": 1725,
+    "evaluated_at": "2026-09-07T03:24:42.465525Z"
+  },
+  "boundary_geojson_url": null,
+  "qa": {
+    "aoi_valid_fraction": 0.9999915063970986,
+    "lake_envelope_valid_fraction": 1.0,
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+    "outlier_reference_observation": null,
+    "relative_area_change": null
+  },
+  "provenance": {
+    "code_version": "scan_sentinel1_v0_1",
+    "config_path": "config/lakes/imja-tsho.json",
+    "image_id": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211216T121357_20211216T121422_041034_04DFDD_D57B",
+    "earth_engine_collection": "COPERNICUS/S1_GRD",
+    "orbit_pass": "ASCENDING",
+    "relative_orbit": 12,
+    "platform_number": "A",
+    "instrument_mode": "IW",
+    "polarizations": [
+      "VV",
+      "VH"
+    ],
+    "resolution_meters": 10,
+    "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+    "geometry_config_path": "config/lakes/imja-tsho.json",
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
+  }
+}

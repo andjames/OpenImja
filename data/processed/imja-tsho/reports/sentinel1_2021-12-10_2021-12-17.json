@@ -1,0 +1,30 @@
+{
+  "lake_id": "imja-tsho",
+  "measurement_family": "sar",
+  "start": "2021-12-10",
+  "end": "2021-12-17",
+  "scene_count": 2,
+  "generated_at": "2026-09-07T03:24:42.876428Z",
+  "scenes": [
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211212T001137_20211212T001202_040968_04DDB7_C7E7",
+      "observed_at": "2021-12-12T00:11:37Z",
+      "state": "rejected",
+      "value": 0.000601,
+      "rejection_reasons": [
+        "SAR_COMPONENT_BELOW_MINIMUM_AREA"
+      ],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211216T121357_20211216T121422_041034_04DFDD_D57B",
+      "observed_at": "2021-12-16T12:13:57Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    }
+  ]
+}

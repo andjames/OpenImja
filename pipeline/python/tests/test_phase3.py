@@ -1,6 +1,9 @@
 import unittest
 from datetime import datetime, timezone
 
+from shapely.geometry import box
+
+from build_s1_s2_validation_geometries import comparison_features
 from lifecycle import should_update_latest
 from pairing import observation_pairs, summarize_pairs
 from sar_qa import assess_sar_scene
@@ -44,6 +47,11 @@ class SarAndPairingTest(unittest.TestCase):
         self.assertEqual(pairs[0]["sentinel1_state"], "rejected")
         self.assertAlmostEqual(pairs[0]["absolute_area_difference_km2"], 0.34)
         self.assertEqual(summarize_pairs(pairs)["overall"]["count"], 1)
+
+    def test_validation_layers_keep_reference_and_spatial_disagreement(self):
+        features = comparison_features("example-pair", box(0, 0, 2, 2), box(1, 0, 3, 2))
+        self.assertEqual({feature["properties"]["layer"] for feature in features}, {"optical", "sar", "intersection", "optical_omission", "sar_commission"})
+        self.assertTrue(all(feature["properties"]["pair_id"] == "example-pair" for feature in features))
 
 
 if __name__ == "__main__":

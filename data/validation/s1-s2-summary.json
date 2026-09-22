@@ -1,14 +1,30 @@
 {
-  "pair_count": 0,
-  "quantified_pair_count": 0,
+  "pair_count": 3,
+  "quantified_pair_count": 1,
   "overall": {
-    "count": 0,
-    "median_absolute_difference_km2": null,
-    "median_absolute_percentage_difference": null,
-    "mean_signed_difference_km2": null,
-    "maximum_absolute_difference_km2": null
+    "count": 1,
+    "median_absolute_difference_km2": 1.590025,
+    "median_absolute_percentage_difference": 99.96221613377374,
+    "mean_signed_difference_km2": -1.590025,
+    "maximum_absolute_difference_km2": 1.590025
   },
-  "by_orbit_pass": {},
-  "by_season": {},
+  "by_orbit_pass": {
+    "DESCENDING": {
+      "count": 1,
+      "median_absolute_difference_km2": 1.590025,
+      "median_absolute_percentage_difference": 99.96221613377374,
+      "mean_signed_difference_km2": -1.590025,
+      "maximum_absolute_difference_km2": 1.590025
+    }
+  },
+  "by_season": {
+    "winter": {
+      "count": 1,
+      "median_absolute_difference_km2": 1.590025,
+      "median_absolute_percentage_difference": 99.96221613377374,
+      "mean_signed_difference_km2": -1.590025,
+      "maximum_absolute_difference_km2": 1.590025
+    }
+  },
   "interpretation": "Insufficient evidence for validation success"
 }

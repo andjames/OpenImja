@@ -67,10 +67,13 @@ Open `web/review.html` through a static server. It shows retained boundaries and
 ```sh
 python pipeline/python/scan_sentinel1.py --start 2025-11-14 --end 2025-11-21 --project "$OPENIMJA_EE_PROJECT"
 python pipeline/python/pair_s1_s2.py --window-days 3
+python pipeline/python/build_s1_s2_validation_geometries.py
 python pipeline/python/summarize_s1_s2_pairs.py
 ```
 
-See [SAR methodology](../docs/sar-methodology.md). The pairing CSV retains all nearby SAR records, including rejected scenes, so a small or selective sample cannot be mistaken for validation.
+Open `web/validation.html` through a static server to inspect one pair at a time: shared-extent optical and SAR maps, a precomputed overlap/omission/commission map, and the retained QA state. The pairing CSV retains all nearby SAR records, including rejected scenes, so a small or selective sample cannot be mistaken for validation.
+
+See [SAR methodology](../docs/sar-methodology.md). The spatial layers are an audit aid, not a sensor-harmonization product or a publication mechanism.
 
 ## Historical optical archive and observability
 

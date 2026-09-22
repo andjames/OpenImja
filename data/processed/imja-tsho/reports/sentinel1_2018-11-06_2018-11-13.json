@@ -1,0 +1,20 @@
+{
+  "lake_id": "imja-tsho",
+  "measurement_family": "sar",
+  "start": "2018-11-06",
+  "end": "2018-11-13",
+  "scene_count": 1,
+  "generated_at": "2026-09-06T18:01:29.251568Z",
+  "scenes": [
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20181110T001123_20181110T001148_024518_02B09D_C03D",
+      "observed_at": "2018-11-10T00:11:23Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "DESCENDING"
+    }
+  ]
+}

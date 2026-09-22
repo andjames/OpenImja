@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Static Sentinel-1 and Sentinel-2 spatial comparison for OpenImja.">
+    <title>OpenImja — SAR validation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header"><a class="wordmark" href="./">OPENIMJA <span>OBSERVATORY</span></a><p>Experimental SAR / optical comparison</p></header>
+    <main>
+      <section class="intro"><p class="eyebrow">METHOD VALIDATION</p><h1>SAR / OPTICAL</h1><p class="location">Imja Tsho · paired observations are kept as independent measurement families</p></section>
+      <section class="notice"><strong>Not a measurement series.</strong> Sentinel-1 is experimental and is not used to fill or alter the published optical lake-area record. A rejected SAR scene remains visible here precisely so its failure can be inspected.</section>
+      <section class="panel validation-picker" aria-labelledby="pair-heading">
+        <div class="section-heading"><p class="eyebrow">PAIRED SCENES</p><h2 id="pair-heading">Select an audit pair</h2></div>
+        <div class="boundary-controls"><button id="pair-prev" type="button">← Earlier</button><span id="pair-label">Loading pairs…</span><button id="pair-next" type="button">Later →</button></div>
+      </section>
+      <section class="validation-maps" aria-label="Spatial comparison maps">
+        <article class="panel"><div class="section-heading"><p class="eyebrow">REFERENCE</p><h2>Optical boundary</h2></div><div id="optical-map" class="validation-map"></div></article>
+        <article class="panel"><div class="section-heading"><p class="eyebrow">EXPERIMENT</p><h2>SAR boundary</h2></div><div id="sar-map" class="validation-map"></div></article>
+        <article class="panel"><div class="section-heading"><p class="eyebrow">SPATIAL DIFFERENCE</p><h2>Overlap / disagreement</h2></div><div id="difference-map" class="validation-map"></div></article>
+      </section>
+      <section class="panel validation-details" aria-labelledby="comparison-heading">
+        <div class="section-heading"><p class="eyebrow">AUDIT METRICS</p><h2 id="comparison-heading">Pair metadata</h2></div>
+        <div id="pair-metrics" class="coverage-grid" aria-live="polite"></div>
+        <dl id="pair-provenance" class="review-details"></dl>
+        <p class="caption"><span class="legend-chip overlap"></span> overlap &nbsp; <span class="legend-chip omission"></span> optical area not identified by SAR &nbsp; <span class="legend-chip commission"></span> SAR area outside the optical boundary. Geometry comparisons are descriptive and do not establish that either measurement is a true shoreline.</p>
+      </section>
+    </main>
+    <footer>OpenImja v0.1 · Static validation audit · <a href="./">Observatory</a> · <a href="../docs/sar-methodology.md">SAR methodology</a> · <a href="../data/validation/s1-s2-pairs.csv">Pair CSV</a></footer>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="validation.js"></script>
+  </body>
+</html>
