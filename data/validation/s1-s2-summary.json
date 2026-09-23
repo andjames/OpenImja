@@ -1,30 +1,61 @@
 {
-  "pair_count": 3,
-  "quantified_pair_count": 1,
+  "pair_count": 60,
+  "quantified_pair_count": 34,
   "overall": {
-    "count": 1,
-    "median_absolute_difference_km2": 1.590025,
-    "median_absolute_percentage_difference": 99.96221613377374,
-    "mean_signed_difference_km2": -1.590025,
-    "maximum_absolute_difference_km2": 1.590025
+    "count": 34,
+    "median_absolute_difference_km2": 0.6562875000000001,
+    "median_absolute_percentage_difference": 46.972931766251136,
+    "mean_signed_difference_km2": -0.7504728823529412,
+    "maximum_absolute_difference_km2": 1.718526
   },
-  "by_orbit_pass": {
-    "DESCENDING": {
+  "by_temporal_context": {
+    "contextual_month_scale": {
+      "count": 33,
+      "median_absolute_difference_km2": 0.6145400000000001,
+      "median_absolute_percentage_difference": 45.85298155554229,
+      "mean_signed_difference_km2": -0.7250319090909092,
+      "maximum_absolute_difference_km2": 1.718526
+    },
+    "near_coincident": {
       "count": 1,
       "median_absolute_difference_km2": 1.590025,
       "median_absolute_percentage_difference": 99.96221613377374,
       "mean_signed_difference_km2": -1.590025,
+      "maximum_absolute_difference_km2": 1.590025
+    }
+  },
+  "by_orbit_pass": {
+    "ASCENDING": {
+      "count": 17,
+      "median_absolute_difference_km2": 0.835057,
+      "median_absolute_percentage_difference": 59.183909542694536,
+      "mean_signed_difference_km2": -0.9434102352941177,
+      "maximum_absolute_difference_km2": 1.718526
+    },
+    "DESCENDING": {
+      "count": 17,
+      "median_absolute_difference_km2": 0.386305,
+      "median_absolute_percentage_difference": 26.392959469945687,
+      "mean_signed_difference_km2": -0.5575355294117648,
       "maximum_absolute_difference_km2": 1.590025
     }
   },
   "by_season": {
+    "post_monsoon": {
+      "count": 27,
+      "median_absolute_difference_km2": 0.6145400000000001,
+      "median_absolute_percentage_difference": 48.09288197695999,
+      "mean_signed_difference_km2": -0.6935099629629631,
+      "maximum_absolute_difference_km2": 1.338235
+    },
     "winter": {
-      "count": 1,
-      "median_absolute_difference_km2": 1.590025,
-      "median_absolute_percentage_difference": 99.96221613377374,
-      "mean_signed_difference_km2": -1.590025,
-      "maximum_absolute_difference_km2": 1.590025
+      "count": 7,
+      "median_absolute_difference_km2": 0.6980350000000001,
+      "median_absolute_percentage_difference": 43.8842946110525,
+      "mean_signed_difference_km2": -0.970187,
+      "maximum_absolute_difference_km2": 1.718526
     }
   },
-  "interpretation": "Insufficient evidence for validation success"
+  "interpretation": "Insufficient near-coincident evidence for validation success",
+  "temporal_note": "Contextual month-scale pairs are retained for observability and method exploration. Only near-coincident pairs support direct temporal validation."
 }

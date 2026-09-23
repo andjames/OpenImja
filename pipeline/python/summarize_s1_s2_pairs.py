@@ -10,7 +10,7 @@ CSV = ROOT / "data/validation/s1-s2-pairs.csv"
 OUT = ROOT / "data/validation/s1-s2-summary.json"
 
 def cast(row: dict) -> dict:
-    for key in ["sentinel2_area_km2", "sentinel1_area_km2", "temporal_separation_hours", "temporal_separation_days", "absolute_area_difference_km2", "percentage_area_difference", "signed_area_difference_km2"]:
+    for key in ["sentinel2_area_km2", "sentinel1_area_km2", "temporal_separation_hours", "temporal_separation_days", "pairing_window_days", "strict_window_days", "absolute_area_difference_km2", "percentage_area_difference", "signed_area_difference_km2"]:
         row[key] = float(row[key]) if row.get(key) not in {None, ""} else None
     return row
 

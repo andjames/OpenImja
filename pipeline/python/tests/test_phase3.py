@@ -48,6 +48,17 @@ class SarAndPairingTest(unittest.TestCase):
         self.assertAlmostEqual(pairs[0]["absolute_area_difference_km2"], 0.34)
         self.assertEqual(summarize_pairs(pairs)["overall"]["count"], 1)
 
+    def test_contextual_pair_is_not_labelled_near_coincident(self):
+        optical = [{"measurement_family": "optical", "observation_state": "published", "observed_at": "2025-11-01T00:00:00Z", "value": 1.0, "source_product": "s2"}]
+        sar = [{"measurement_family": "sar", "observation_state": "processed", "observed_at": "2025-11-21T00:00:00Z", "value": 1.0, "source_product": "s1"}]
+        pair = observation_pairs(optical, sar, 31, strict_window_days=3)[0]
+        self.assertEqual(pair["pairing_class"], "contextual_month_scale")
+        self.assertEqual(pair["strict_window_days"], 3)
+
+    def test_contextual_sample_does_not_claim_validation_evidence(self):
+        rows = [{"signed_area_difference_km2": 0.1, "absolute_area_difference_km2": 0.1, "percentage_area_difference": 10, "sentinel1_orbit_pass": "DESCENDING", "sentinel2_observed_at": "2025-11-20T00:00:00Z", "pairing_class": "contextual_month_scale"}]
+        self.assertIn("Insufficient near-coincident", summarize_pairs(rows)["interpretation"])
+
     def test_validation_layers_keep_reference_and_spatial_disagreement(self):
         features = comparison_features("example-pair", box(0, 0, 2, 2), box(1, 0, 3, 2))
         self.assertEqual({feature["properties"]["layer"] for feature in features}, {"optical", "sar", "intersection", "optical_omission", "sar_commission"})

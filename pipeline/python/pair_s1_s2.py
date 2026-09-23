@@ -23,14 +23,17 @@ def spatial_metrics(row: dict) -> dict:
         return {"iou":None,"optical_omission_fraction":None,"sar_commission_fraction":None,"centroid_displacement_degrees":None}
 
 def main() -> None:
-    parser = argparse.ArgumentParser(); parser.add_argument("--window-days", type=float, default=3); args = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Pair all retained SAR scenes with published optical references in an explicit temporal context.")
+    parser.add_argument("--window-days", type=float, default=31, help="Maximum absolute separation retained in the contextual archive (default: 31).")
+    parser.add_argument("--strict-window-days", type=float, default=3, help="Maximum separation labelled near_coincident for direct validation (default: 3).")
+    args = parser.parse_args()
     optical = records(ROOT / "data/processed/imja-tsho/scenes") + records(ROOT / "data/processed/imja-tsho")
     sar = records(ROOT / "data/processed/imja-tsho/sar-scenes")
-    rows = [{**row,**spatial_metrics(row)} for row in observation_pairs(optical, sar, args.window_days)]
+    rows = [{**row,**spatial_metrics(row)} for row in observation_pairs(optical, sar, args.window_days, args.strict_window_days)]
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    fields = list(rows[0]) if rows else ["sentinel2_observed_at", "sentinel2_area_km2", "sentinel2_product_id", "sentinel2_boundary", "sentinel1_observed_at", "sentinel1_area_km2", "sentinel1_product_id", "sentinel1_boundary", "temporal_separation_hours", "temporal_separation_days", "absolute_area_difference_km2", "percentage_area_difference", "signed_area_difference_km2", "sentinel1_orbit_pass", "sentinel1_polarization", "sentinel1_incidence_metadata", "sentinel1_parameters", "sentinel2_quality_flags", "sentinel1_quality_flags", "sentinel1_state", "iou", "optical_omission_fraction", "sar_commission_fraction", "centroid_displacement_degrees"]
+    fields = list(rows[0]) if rows else ["sentinel2_observed_at", "sentinel2_area_km2", "sentinel2_product_id", "sentinel2_boundary", "sentinel1_observed_at", "sentinel1_area_km2", "sentinel1_product_id", "sentinel1_boundary", "temporal_separation_hours", "temporal_separation_days", "pairing_window_days", "strict_window_days", "pairing_class", "absolute_area_difference_km2", "percentage_area_difference", "signed_area_difference_km2", "sentinel1_orbit_pass", "sentinel1_polarization", "sentinel1_incidence_metadata", "sentinel1_parameters", "sentinel2_quality_flags", "sentinel1_quality_flags", "sentinel1_state", "iou", "optical_omission_fraction", "sar_commission_fraction", "centroid_displacement_degrees"]
     with OUT.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n"); writer.writeheader(); writer.writerows(rows)
-    print(json.dumps({"pairs": len(rows), "output": str(OUT.relative_to(ROOT))}, indent=2))
+    print(json.dumps({"pairs": len(rows), "window_days": args.window_days, "strict_window_days": args.strict_window_days, "output": str(OUT.relative_to(ROOT))}, indent=2))
 
 if __name__ == "__main__": main()

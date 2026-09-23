@@ -66,12 +66,12 @@ Open `web/review.html` through a static server. It shows retained boundaries and
 
 ```sh
 python pipeline/python/scan_sentinel1.py --start 2025-11-14 --end 2025-11-21 --project "$OPENIMJA_EE_PROJECT"
-python pipeline/python/pair_s1_s2.py --window-days 3
+python pipeline/python/pair_s1_s2.py --window-days 31 --strict-window-days 3
 python pipeline/python/build_s1_s2_validation_geometries.py
 python pipeline/python/summarize_s1_s2_pairs.py
 ```
 
-Open `web/validation.html` through a static server to inspect one pair at a time: shared-extent optical and SAR maps, a precomputed overlap/omission/commission map, and the retained QA state. The pairing CSV retains all nearby SAR records, including rejected scenes, so a small or selective sample cannot be mistaken for validation.
+Open `web/validation.html` through a static server to inspect one pair at a time: shared-extent optical and SAR maps, a precomputed overlap/omission/commission map, and the retained QA state. The pairing CSV retains all SAR records in the configured contextual window, including rejected scenes. It labels strict near-coincident pairs separately from month-scale contextual records, so coverage can be studied without overstating temporal comparability.
 
 See [SAR methodology](../docs/sar-methodology.md). The spatial layers are an audit aid, not a sensor-harmonization product or a publication mechanism.
 
@@ -83,7 +83,7 @@ See [SAR methodology](../docs/sar-methodology.md). The spatial layers are an aud
 python pipeline/python/build_optical_archive.py --start-year 1985 --end-year 2026 --execute --project "$OPENIMJA_EE_PROJECT"
 python pipeline/python/build_optical_archive.py --start-year 1985 --end-year 2026
 python pipeline/python/pair_optical_sensors.py --window-days 7
-python pipeline/python/pair_s1_s2.py --window-days 3
+python pipeline/python/pair_s1_s2.py --window-days 31 --strict-window-days 3
 python pipeline/python/build_observability.py
 ```
 

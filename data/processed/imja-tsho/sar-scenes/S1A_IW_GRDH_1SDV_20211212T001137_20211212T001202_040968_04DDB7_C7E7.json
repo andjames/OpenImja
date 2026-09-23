@@ -5,7 +5,7 @@
   "value": 0.000601,
   "unit": "km2",
   "observed_at": "2021-12-12T00:11:37Z",
-  "processed_at": "2026-09-07T03:24:41.093071Z",
+  "processed_at": "2026-09-23T20:52:57.552210Z",
   "source": "Sentinel-1",
   "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211212T001137_20211212T001202_040968_04DDB7_C7E7",
   "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
@@ -30,17 +30,17 @@
   "state_history": [
     {
       "state": "discovered",
-      "at": "2026-09-07T03:24:41.093071Z"
+      "at": "2026-09-23T20:52:57.552210Z"
     },
     {
       "state": "rejected",
-      "at": "2026-09-07T03:24:41.093071Z"
+      "at": "2026-09-23T20:52:57.552210Z"
     }
   ],
   "freshness": {
     "status": "HISTORICAL",
-    "age_days": 1730,
-    "evaluated_at": "2026-09-07T03:24:41.093071Z"
+    "age_days": 1746,
+    "evaluated_at": "2026-09-23T20:52:57.552210Z"
   },
   "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211212T001137_20211212T001202_040968_04DDB7_C7E7.geojson",
   "qa": {

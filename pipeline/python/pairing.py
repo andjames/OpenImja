@@ -9,7 +9,12 @@ def parse_time(value: str) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 
-def observation_pairs(optical_records: list[dict], sar_records: list[dict], window_days: float) -> list[dict]:
+def observation_pairs(optical_records: list[dict], sar_records: list[dict], window_days: float, strict_window_days: float = 3) -> list[dict]:
+    """Retain all SAR scenes in an explicit temporal context around optical references.
+
+    A contextual pair is useful for observability and method exploration but is
+    not a near-coincident validation pair. No pairing changes either observation.
+    """
     pairs = []
     for optical in optical_records:
         if optical.get("measurement_family") != "optical" or optical.get("observation_state") not in {"reviewed", "published"}:
@@ -21,7 +26,8 @@ def observation_pairs(optical_records: list[dict], sar_records: list[dict], wind
             if abs(separation_hours) > window_days * 24:
                 continue
             difference = None if sar.get("value") is None or optical.get("value") is None else sar["value"] - optical["value"]
-            pairs.append({"sentinel2_observed_at": optical["observed_at"], "sentinel2_area_km2": optical.get("value"), "sentinel2_product_id": optical["source_product"], "sentinel2_boundary": optical.get("boundary_geojson_url"), "sentinel1_observed_at": sar["observed_at"], "sentinel1_area_km2": sar.get("value"), "sentinel1_product_id": sar["source_product"], "sentinel1_boundary": sar.get("boundary_geojson_url"), "temporal_separation_hours": separation_hours, "temporal_separation_days": separation_hours / 24, "absolute_area_difference_km2": abs(difference) if difference is not None else None, "percentage_area_difference": (abs(difference) / optical["value"] * 100) if difference is not None and optical["value"] else None, "signed_area_difference_km2": difference, "sentinel1_orbit_pass": sar.get("provenance", {}).get("orbit_pass"), "sentinel1_polarization": sar.get("provenance", {}).get("polarization"), "sentinel1_incidence_metadata": sar.get("provenance", {}).get("incidence_angle_summary"), "sentinel1_parameters": sar.get("parameters", {}), "sentinel2_quality_flags": ";".join(optical.get("quality_flags", [])), "sentinel1_quality_flags": ";".join(sar.get("quality_flags", [])), "sentinel1_state": sar.get("observation_state")})
+            strict = abs(separation_hours) <= strict_window_days * 24
+            pairs.append({"sentinel2_observed_at": optical["observed_at"], "sentinel2_area_km2": optical.get("value"), "sentinel2_product_id": optical["source_product"], "sentinel2_boundary": optical.get("boundary_geojson_url"), "sentinel1_observed_at": sar["observed_at"], "sentinel1_area_km2": sar.get("value"), "sentinel1_product_id": sar["source_product"], "sentinel1_boundary": sar.get("boundary_geojson_url"), "temporal_separation_hours": separation_hours, "temporal_separation_days": separation_hours / 24, "pairing_window_days": window_days, "strict_window_days": strict_window_days, "pairing_class": "near_coincident" if strict else "contextual_month_scale", "absolute_area_difference_km2": abs(difference) if difference is not None else None, "percentage_area_difference": (abs(difference) / optical["value"] * 100) if difference is not None and optical["value"] else None, "signed_area_difference_km2": difference, "sentinel1_orbit_pass": sar.get("provenance", {}).get("orbit_pass"), "sentinel1_polarization": sar.get("provenance", {}).get("polarization"), "sentinel1_incidence_metadata": sar.get("provenance", {}).get("incidence_angle_summary"), "sentinel1_parameters": sar.get("parameters", {}), "sentinel2_quality_flags": ";".join(optical.get("quality_flags", [])), "sentinel1_quality_flags": ";".join(sar.get("quality_flags", [])), "sentinel1_state": sar.get("observation_state")})
     return sorted(pairs, key=lambda row: (row["sentinel2_observed_at"], abs(row["temporal_separation_hours"])))
 
 
@@ -37,4 +43,7 @@ def summarize_pairs(rows: list[dict]) -> dict:
         return {"count": len(items), "median_absolute_difference_km2": median(x["absolute_area_difference_km2"] for x in items), "median_absolute_percentage_difference": median(x["percentage_area_difference"] for x in items), "mean_signed_difference_km2": sum(x["signed_area_difference_km2"] for x in items) / len(items), "maximum_absolute_difference_km2": max(x["absolute_area_difference_km2"] for x in items)}
     by_orbit = {key: group([row for row in valid if row["sentinel1_orbit_pass"] == key]) for key in sorted({row["sentinel1_orbit_pass"] for row in valid})}
     by_season = {key: group([row for row in valid if season(row["sentinel2_observed_at"]) == key]) for key in sorted({season(row["sentinel2_observed_at"]) for row in valid})}
-    return {"pair_count": len(rows), "quantified_pair_count": len(valid), "overall": group(valid), "by_orbit_pass": by_orbit, "by_season": by_season, "interpretation": "Insufficient evidence for validation success" if len(valid) < 5 else "Descriptive statistics only; families remain separate pending scientific review."}
+    by_temporal_context = {key: group([row for row in valid if row.get("pairing_class", "near_coincident") == key]) for key in sorted({row.get("pairing_class", "near_coincident") for row in valid})}
+    near_coincident_count = by_temporal_context.get("near_coincident", {}).get("count", 0)
+    interpretation = "Insufficient near-coincident evidence for validation success" if near_coincident_count < 5 else "Descriptive statistics only; families remain separate pending scientific review."
+    return {"pair_count": len(rows), "quantified_pair_count": len(valid), "overall": group(valid), "by_temporal_context": by_temporal_context, "by_orbit_pass": by_orbit, "by_season": by_season, "interpretation": interpretation, "temporal_note": "Contextual month-scale pairs are retained for observability and method exploration. Only near-coincident pairs support direct temporal validation."}

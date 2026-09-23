@@ -1,15 +1,119 @@
 {
   "lake_id": "imja-tsho",
   "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
-  "generated_at": "2026-08-31T21:13:54.325053Z",
+  "generated_at": "2026-09-23T20:54:55.267301Z",
   "definitions": "Rank orders representative processed candidates within a sensor/year group by distance from that group\u2019s median area, then envelope coverage. It is a review aid, not an automated quality or publication decision.",
   "state_counts": {
-    "processed": 23,
-    "rejected": 247,
+    "processed": 48,
+    "rejected": 281,
     "reviewed": 0,
     "published": 6
   },
   "candidates": [
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20181005T001123_20181005T001148_023993_029F07_F03D.json",
+      "observed_at": "2018-10-05T00:11:23Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20181005T001123_20181005T001148_023993_029F07_F03D",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.107996,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20181005T001123_20181005T001148_023993_029F07_F03D.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9990232214811733,
+        "lake_envelope_valid_fraction": 0.9925956472554034,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.788347,
+      "season_group_candidate_count": 3,
+      "review_rank": 3,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20181029T001123_20181029T001148_024343_02AA5D_ED1B.json",
+      "observed_at": "2018-10-29T00:11:23Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20181029T001123_20181029T001148_024343_02AA5D_ED1B",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.788347,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20181029T001123_20181029T001148_024343_02AA5D_ED1B.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.999767511187275,
+        "lake_envelope_valid_fraction": 0.9988781010606564,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.788347,
+      "season_group_candidate_count": 3,
+      "review_rank": 1,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20181102T121340_20181102T121405_024409_02AC8E_7DC8.json",
+      "observed_at": "2018-11-02T12:13:40Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20181102T121340_20181102T121405_024409_02AC8E_7DC8",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.609728,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20181102T121340_20181102T121405_024409_02AC8E_7DC8.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9997961577535146,
+        "lake_envelope_valid_fraction": 0.9998504030757127,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.788347,
+      "season_group_candidate_count": 3,
+      "review_rank": 2,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211005T121358_20211005T121423_039984_04BB88_68F7.json",
+      "observed_at": "2021-10-05T12:13:58Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211005T121358_20211005T121423_039984_04BB88_68F7",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.097872,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211005T121358_20211005T121423_039984_04BB88_68F7.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9998301294243915,
+        "lake_envelope_valid_fraction": 0.9995512306838541,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 1,
+      "review_recommended": true
+    },
     {
       "record_path": "data/processed/imja-tsho/scenes/20211014T044751_20211014T045624_T45RVL.json",
       "observed_at": "2021-10-14T05:01:09.982000Z",
@@ -33,6 +137,32 @@
       ],
       "season_group_median_area_km2": 1.592481,
       "season_group_candidate_count": 10,
+      "review_rank": 2,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211017T121358_20211017T121423_040159_04C195_E0B1.json",
+      "observed_at": "2021-10-17T12:13:58Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211017T121358_20211017T121423_040159_04C195_E0B1",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.084641,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211017T121358_20211017T121423_040159_04C195_E0B1.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9998810910367023,
+        "lake_envelope_valid_fraction": 0.9997756138939877,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
       "review_rank": 2,
       "review_recommended": true
     },
@@ -89,6 +219,32 @@
       "review_recommended": true
     },
     {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211130T001138_20211130T001203_040793_04D7A7_D068.json",
+      "observed_at": "2021-11-30T00:11:38Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211130T001138_20211130T001203_040793_04D7A7_D068",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.048356,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211130T001138_20211130T001203_040793_04D7A7_D068.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9999065711118411,
+        "lake_envelope_valid_fraction": 0.9993268675465979,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 3,
+      "review_recommended": true
+    },
+    {
       "record_path": "data/processed/imja-tsho/scenes/20241023T044749_20241023T045343_T45RVL.json",
       "observed_at": "2024-10-23T05:01:05.452000Z",
       "measurement_family": "optical",
@@ -141,6 +297,58 @@
       "review_recommended": true
     },
     {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241106T121405_20241106T121430_056434_06EA75_4EE2.json",
+      "observed_at": "2024-11-06T12:14:05Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20241106T121405_20241106T121430_056434_06EA75_4EE2",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.446188,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241106T121405_20241106T121430_056434_06EA75_4EE2.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9968170901153762,
+        "lake_envelope_valid_fraction": 0.9825646302522439,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.839918,
+      "season_group_candidate_count": 4,
+      "review_rank": 3,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241114T001134_20241114T001159_056543_06EED0_76CB.json",
+      "observed_at": "2024-11-14T00:11:34Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20241114T001134_20241114T001159_056543_06EED0_76CB",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.327209,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241114T001134_20241114T001159_056543_06EED0_76CB.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9992293617791886,
+        "lake_envelope_valid_fraction": 0.9957339195490504,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.839918,
+      "season_group_candidate_count": 4,
+      "review_rank": 1,
+      "review_recommended": true
+    },
+    {
       "record_path": "data/processed/imja-tsho/scenes/20241117T045101_20241117T045056_T45RVL.json",
       "observed_at": "2024-11-17T05:01:04.210000Z",
       "measurement_family": "optical",
@@ -165,6 +373,266 @@
       "season_group_candidate_count": 13,
       "review_rank": 2,
       "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241130T121404_20241130T121429_056784_06F86D_C5EF.json",
+      "observed_at": "2024-11-30T12:14:04Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20241130T121404_20241130T121429_056784_06F86D_C5EF",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.352626,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241130T121404_20241130T121429_056784_06F86D_C5EF.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9997112168665071,
+        "lake_envelope_valid_fraction": 0.9991772323621938,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.839918,
+      "season_group_candidate_count": 4,
+      "review_rank": 2,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251020T121356_20251020T121421_061509_07AE20_282B.json",
+      "observed_at": "2025-10-20T12:13:56Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20251020T121356_20251020T121421_061509_07AE20_282B",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.637995,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251020T121356_20251020T121421_061509_07AE20_282B.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9984456965546024,
+        "lake_envelope_valid_fraction": 0.9913104303870977,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.7257,
+      "season_group_candidate_count": 5,
+      "review_rank": 2,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251121T001124_20251121T001149_061968_07C02A_9397.json",
+      "observed_at": "2025-11-21T00:11:24Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20251121T001124_20251121T001149_061968_07C02A_9397",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.7257,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251121T001124_20251121T001149_061968_07C02A_9397.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9997207806045675,
+        "lake_envelope_valid_fraction": 0.9985787366685059,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.7257,
+      "season_group_candidate_count": 5,
+      "review_rank": 1,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251125T121354_20251125T121419_062034_07C2B8_14FA.json",
+      "observed_at": "2025-11-25T12:13:54Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20251125T121354_20251125T121419_062034_07C2B8_14FA",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.505183,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251125T121354_20251125T121419_062034_07C2B8_14FA.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9996602597314354,
+        "lake_envelope_valid_fraction": 0.9994016440709087,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.7257,
+      "season_group_candidate_count": 5,
+      "review_rank": 3,
+      "review_recommended": true
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210907T001138_20210907T001203_039568_04AD51_D5A1.json",
+      "observed_at": "2021-09-07T00:11:38Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210907T001138_20210907T001203_039568_04AD51_D5A1",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.244916,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210907T001138_20210907T001203_039568_04AD51_D5A1.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9991517232328844,
+        "lake_envelope_valid_fraction": 0.993430285915576,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 4,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210911T121357_20210911T121422_039634_04AF85_E8A4.json",
+      "observed_at": "2021-09-11T12:13:57Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210911T121357_20210911T121422_039634_04AF85_E8A4",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.645713,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210911T121357_20210911T121422_039634_04AF85_E8A4.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9999235591448377,
+        "lake_envelope_valid_fraction": 0.9996260475069247,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 13,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210919T001138_20210919T001203_039743_04B33F_A712.json",
+      "observed_at": "2021-09-19T00:11:38Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210919T001138_20210919T001203_039743_04B33F_A712",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.274486,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210919T001138_20210919T001203_039743_04B33F_A712.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9997441306427237,
+        "lake_envelope_valid_fraction": 0.9986891925701944,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 6,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210923T121358_20210923T121423_039809_04B566_0737.json",
+      "observed_at": "2021-09-23T12:13:58Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210923T121358_20210923T121423_039809_04B566_0737",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.703949,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20210923T121358_20210923T121423_039809_04B566_0737.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.999881092026844,
+        "lake_envelope_valid_fraction": 0.999476473880006,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 12,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211001T001139_20211001T001204_039918_04B945_6E1A.json",
+      "observed_at": "2021-10-01T00:11:39Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211001T001139_20211001T001204_039918_04B945_6E1A",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.376425,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211001T001139_20211001T001204_039918_04B945_6E1A.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9992950328376802,
+        "lake_envelope_valid_fraction": 0.9955007330118132,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 10,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211013T001139_20211013T001204_040093_04BF59_9E34.json",
+      "observed_at": "2021-10-13T00:11:39Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211013T001139_20211013T001204_040093_04BF59_9E34",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.318389,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211013T001139_20211013T001204_040093_04BF59_9E34.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9995243625784065,
+        "lake_envelope_valid_fraction": 0.9967438271016482,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 9,
+      "review_recommended": false
     },
     {
       "record_path": "data/processed/imja-tsho/scenes/20211024T044851_20211024T045820_T45RVL.json",
@@ -193,6 +661,32 @@
       "review_recommended": false
     },
     {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211025T001139_20211025T001204_040268_04C570_218F.json",
+      "observed_at": "2021-10-25T00:11:39Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211025T001139_20211025T001204_040268_04C570_218F",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.25915,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211025T001139_20211025T001204_040268_04C570_218F.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9996347810724866,
+        "lake_envelope_valid_fraction": 0.9977534760404508,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 5,
+      "review_recommended": false
+    },
+    {
       "record_path": "data/processed/imja-tsho/scenes/20211029T044919_20211029T045138_T45RVL.json",
       "observed_at": "2021-10-29T05:01:05.954000Z",
       "measurement_family": "optical",
@@ -216,6 +710,32 @@
       "season_group_median_area_km2": 1.592481,
       "season_group_candidate_count": 10,
       "review_rank": 5,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211029T121358_20211029T121423_040334_04C7A8_C4DB.json",
+      "observed_at": "2021-10-29T12:13:58Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211029T121358_20211029T121423_040334_04C7A8_C4DB",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.773311,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211029T121358_20211029T121423_040334_04C7A8_C4DB.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9993290075833967,
+        "lake_envelope_valid_fraction": 0.9955412049159675,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 11,
       "review_recommended": false
     },
     {
@@ -268,6 +788,58 @@
       "season_group_median_area_km2": 1.592481,
       "season_group_candidate_count": 10,
       "review_rank": 6,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211110T121358_20211110T121423_040509_04CDC8_A5D0.json",
+      "observed_at": "2021-11-10T12:13:58Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211110T121358_20211110T121423_040509_04CDC8_A5D0",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.302551,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211110T121358_20211110T121423_040509_04CDC8_A5D0.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9995880783266048,
+        "lake_envelope_valid_fraction": 0.9967837416011364,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 7,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211118T001138_20211118T001203_040618_04D193_4A07.json",
+      "observed_at": "2021-11-18T00:11:38Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211118T001138_20211118T001203_040618_04D193_4A07",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.892591,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20211118T001138_20211118T001203_040618_04D193_4A07.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9997675132161076,
+        "lake_envelope_valid_fraction": 0.9984292700754978,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 1.097872,
+      "season_group_candidate_count": 13,
+      "review_rank": 8,
       "review_recommended": false
     },
     {
@@ -605,6 +1177,84 @@
       ],
       "season_group_median_area_km2": 1.801921,
       "season_group_candidate_count": 13,
+      "review_rank": 4,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241212T121403_20241212T121428_056959_06FF45_D112.json",
+      "observed_at": "2024-12-12T12:14:03Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20241212T121403_20241212T121428_056959_06FF45_D112",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.070966,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20241212T121403_20241212T121428_056959_06FF45_D112.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.999796156185131,
+        "lake_envelope_valid_fraction": 0.9997756082995011,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.839918,
+      "season_group_candidate_count": 4,
+      "review_rank": 4,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251028T001125_20251028T001150_061618_07B284_AAF5.json",
+      "observed_at": "2025-10-28T00:11:25Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20251028T001125_20251028T001150_061618_07B284_AAF5",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 1.296738,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251028T001125_20251028T001150_061618_07B284_AAF5.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.9984796657289762,
+        "lake_envelope_valid_fraction": 0.9888249394993411,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.7257,
+      "season_group_candidate_count": 5,
+      "review_rank": 5,
+      "review_recommended": false
+    },
+    {
+      "record_path": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251109T001125_20251109T001150_061793_07B95E_0D3F.json",
+      "observed_at": "2025-11-09T00:11:25Z",
+      "measurement_family": "sar",
+      "source": "Sentinel-1",
+      "sensor": "Sentinel-1",
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20251109T001125_20251109T001150_061793_07B95E_0D3F",
+      "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
+      "value": 0.986511,
+      "unit": "km2",
+      "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251109T001125_20251109T001150_061793_07B95E_0D3F.geojson",
+      "qa": {
+        "aoi_valid_fraction": 0.99932052211081,
+        "lake_envelope_valid_fraction": 0.9955676941450858,
+        "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
+        "outlier_reference_observation": null,
+        "relative_area_change": null
+      },
+      "quality_flags": [
+        "EXPERIMENTAL_SAR_PENDING_REVIEW"
+      ],
+      "season_group_median_area_km2": 0.7257,
+      "season_group_candidate_count": 5,
       "review_rank": 4,
       "review_recommended": false
     }

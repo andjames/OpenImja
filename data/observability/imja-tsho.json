@@ -1,7 +1,7 @@
 {
   "lake_id": "imja-tsho",
   "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
-  "as_of": "2026-09-07T03:25:20.962036Z",
+  "as_of": "2026-09-23T20:54:55.307333Z",
   "definitions": "Acquisition counts are canonical-geometry archived scene records; usable means processed/reviewed/published, not a hazard signal.",
   "periods": [
     {
@@ -84,7 +84,7 @@
         },
         "measurement_family": "optical"
       },
-      "days_since_defensible_observation": 293
+      "days_since_defensible_observation": 310
     },
     {
       "period_days": 90,
@@ -166,17 +166,17 @@
         },
         "measurement_family": "optical"
       },
-      "days_since_defensible_observation": 293
+      "days_since_defensible_observation": 310
     },
     {
       "period_days": 365,
-      "total_acquisitions": 9,
+      "total_acquisitions": 19,
       "optical_acquisitions": 9,
       "usable_optical": 1,
       "rejected_optical": 8,
-      "sar_acquisitions": 0,
-      "usable_sar": 0,
-      "rejected_sar": 0,
+      "sar_acquisitions": 10,
+      "usable_sar": 5,
+      "rejected_sar": 5,
       "latest_published_observation": {
         "lake_id": "imja-tsho",
         "variable": "lake_area",
@@ -248,7 +248,7 @@
         },
         "measurement_family": "optical"
       },
-      "days_since_defensible_observation": 293
+      "days_since_defensible_observation": 310
     }
   ]
 }

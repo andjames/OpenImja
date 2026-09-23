@@ -1,0 +1,224 @@
+{
+  "lake_id": "imja-tsho",
+  "measurement_family": "sar",
+  "start": "2021-09-01",
+  "end": "2022-01-31",
+  "scene_count": 24,
+  "generated_at": "2026-09-23T20:25:42.958619Z",
+  "scenes": [
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210907T001138_20210907T001203_039568_04AD51_D5A1",
+      "observed_at": "2021-09-07T00:11:38Z",
+      "state": "processed",
+      "value": 1.244916,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210911T121357_20210911T121422_039634_04AF85_E8A4",
+      "observed_at": "2021-09-11T12:13:57Z",
+      "state": "processed",
+      "value": 0.645713,
+      "rejection_reasons": [],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210919T001138_20210919T001203_039743_04B33F_A712",
+      "observed_at": "2021-09-19T00:11:38Z",
+      "state": "processed",
+      "value": 1.274486,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20210923T121358_20210923T121423_039809_04B566_0737",
+      "observed_at": "2021-09-23T12:13:58Z",
+      "state": "processed",
+      "value": 0.703949,
+      "rejection_reasons": [],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211001T001139_20211001T001204_039918_04B945_6E1A",
+      "observed_at": "2021-10-01T00:11:39Z",
+      "state": "processed",
+      "value": 1.376425,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211005T121358_20211005T121423_039984_04BB88_68F7",
+      "observed_at": "2021-10-05T12:13:58Z",
+      "state": "processed",
+      "value": 1.097872,
+      "rejection_reasons": [],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211013T001139_20211013T001204_040093_04BF59_9E34",
+      "observed_at": "2021-10-13T00:11:39Z",
+      "state": "processed",
+      "value": 1.318389,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211017T121358_20211017T121423_040159_04C195_E0B1",
+      "observed_at": "2021-10-17T12:13:58Z",
+      "state": "processed",
+      "value": 1.084641,
+      "rejection_reasons": [],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211025T001139_20211025T001204_040268_04C570_218F",
+      "observed_at": "2021-10-25T00:11:39Z",
+      "state": "processed",
+      "value": 1.25915,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211029T121358_20211029T121423_040334_04C7A8_C4DB",
+      "observed_at": "2021-10-29T12:13:58Z",
+      "state": "processed",
+      "value": 0.773311,
+      "rejection_reasons": [],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211110T121358_20211110T121423_040509_04CDC8_A5D0",
+      "observed_at": "2021-11-10T12:13:58Z",
+      "state": "processed",
+      "value": 1.302551,
+      "rejection_reasons": [],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211118T001138_20211118T001203_040618_04D193_4A07",
+      "observed_at": "2021-11-18T00:11:38Z",
+      "state": "processed",
+      "value": 0.892591,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211122T121358_20211122T121423_040684_04D3CC_A87D",
+      "observed_at": "2021-11-22T12:13:58Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211130T001138_20211130T001203_040793_04D7A7_D068",
+      "observed_at": "2021-11-30T00:11:38Z",
+      "state": "processed",
+      "value": 1.048356,
+      "rejection_reasons": [],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211204T121357_20211204T121422_040859_04D9E8_B9B1",
+      "observed_at": "2021-12-04T12:13:57Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211212T001137_20211212T001202_040968_04DDB7_C7E7",
+      "observed_at": "2021-12-12T00:11:37Z",
+      "state": "rejected",
+      "value": 0.000601,
+      "rejection_reasons": [
+        "SAR_COMPONENT_BELOW_MINIMUM_AREA"
+      ],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211216T121357_20211216T121422_041034_04DFDD_D57B",
+      "observed_at": "2021-12-16T12:13:57Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211224T001137_20211224T001202_041143_04E382_7E03",
+      "observed_at": "2021-12-24T00:11:37Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20211228T121356_20211228T121421_041209_04E5AB_8B61",
+      "observed_at": "2021-12-28T12:13:56Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20220105T001136_20220105T001201_041318_04E975_477A",
+      "observed_at": "2022-01-05T00:11:36Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20220109T121355_20220109T121420_041384_04EB9B_1E8C",
+      "observed_at": "2022-01-09T12:13:55Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20220117T001136_20220117T001201_041493_04EF2B_7C2A",
+      "observed_at": "2022-01-17T00:11:36Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "DESCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20220121T121355_20220121T121420_041559_04F156_099F",
+      "observed_at": "2022-01-21T12:13:55Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "ASCENDING"
+    },
+    {
+      "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20220129T001135_20220129T001200_041668_04F517_52BE",
+      "observed_at": "2022-01-29T00:11:35Z",
+      "state": "rejected",
+      "value": null,
+      "rejection_reasons": [
+        "NO_LAKE_COMPONENT_AT_SEED"
+      ],
+      "orbit_pass": "DESCENDING"
+    }
+  ]
+}

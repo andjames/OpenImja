@@ -5,7 +5,7 @@
   "value": 0.7257,
   "unit": "km2",
   "observed_at": "2025-11-21T00:11:24Z",
-  "processed_at": "2026-08-28T04:05:33.978892Z",
+  "processed_at": "2026-09-23T20:54:09.518117Z",
   "source": "Sentinel-1",
   "source_product": "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20251121T001124_20251121T001149_061968_07C02A_9397",
   "source_url": "https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S1_GRD",
@@ -28,23 +28,23 @@
   "state_history": [
     {
       "state": "discovered",
-      "at": "2026-08-28T04:05:33.978892Z"
+      "at": "2026-09-23T20:54:09.518117Z"
     },
     {
       "state": "processed",
-      "at": "2026-08-28T04:05:33.978892Z"
+      "at": "2026-09-23T20:54:09.518117Z"
     }
   ],
   "freshness": {
     "status": "HISTORICAL",
-    "age_days": 280,
-    "evaluated_at": "2026-08-28T04:05:33.978892Z"
+    "age_days": 306,
+    "evaluated_at": "2026-09-23T20:54:09.518117Z"
   },
   "boundary_geojson_url": "data/processed/imja-tsho/sar-scenes/S1A_IW_GRDH_1SDV_20251121T001124_20251121T001149_061968_07C02A_9397.geojson",
   "qa": {
-    "aoi_valid_fraction": 0.999513363932882,
+    "aoi_valid_fraction": 0.9997207806045675,
     "lake_envelope_valid_fraction": 0.9985787366685059,
-    "reference_lake_envelope_path": "data/processed/imja-tsho/boundaries/2025-11-17_20251117T044959_20251117T045240_T45RVL.geojson",
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson",
     "outlier_reference_observation": null,
     "relative_area_change": null
   },
@@ -61,6 +61,9 @@
       "VV",
       "VH"
     ],
-    "resolution_meters": 10
+    "resolution_meters": 10,
+    "geometry_version": "imja-expanded-aoi-v2-2026-08-28",
+    "geometry_config_path": "config/lakes/imja-tsho.json",
+    "reference_lake_envelope_path": "data/processed/imja-tsho/reference-candidates/2025-11-17_20251117T044959_20251117T045240_T45RVL_expanded-aoi.geojson"
   }
 }
